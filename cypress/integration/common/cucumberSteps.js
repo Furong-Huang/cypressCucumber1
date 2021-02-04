@@ -1,4 +1,3 @@
-import { should } from 'chai'
 import {Given, When, Then} from 'cypress-cucumber-preprocessor/steps'
 
 Given('I am on the cucumber.js GitHub repository',()=>{
@@ -11,7 +10,7 @@ When('I go to the README file',()=>{
 
 Then('I should see a {string} section',(content)=>{
      cy.get('article.markdown-body').should('not.contain',content).then(()=>{
-          console.log('This ' + content + " was not found.");
+          console.log("This " + content + " was not found.");
      })
 })
 
